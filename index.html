@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="./css/index.css"/>
+    <script src="./lib/jquery/jquery.min.js"></script>
+    <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="top">
+    <div class="container">
+        <div class="row clearfix">
+            <div class="col-md-12 column">
+                <nav class="navbar navbar-default" role="navigation">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="#">Skychen
+                            <div class="geren">
+                                <img src="./images/2017-05-20_202828.jpg" alt=""/>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="collapse d_1 navbar-collapse d_2" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav ">
+                            <li class="active">
+                                <a href="#">Link</a>
+                            </li>
+                            <li>
+                                <a href="#">Link</a>
+                            </li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li>
+                                <a href="#"> <span>北京时间:</span>
+                                    <span class="nian"></span>-
+                                    <span class="yue"></span>-
+                                    <span class="r"></span>
+                                </a>
+
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="shi1"></span>
+                                    <span class="shi2"></span>&nbsp;&nbsp;:&nbsp;&nbsp;
+                                    <span class="fen1"></span>
+                                    <span class="fen2"></span>&nbsp;&nbsp;:&nbsp;&nbsp;
+                                    <span class="miao1"></span>
+                                    <span class="miao2"></span>
+                                </a>
+                            </li>
+                            <li class="mleft">
+                                <a href="#">Link</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="tanchu">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 tc_1">
+                <div class="ll"></div>
+                <div class="lt"></div>
+                <div class="lr"></div>
+                <div class="lb"></div>
+                <div>
+                    <span>W</span>
+                    <span>e</span>
+                    <span>l</span>
+                    <span>c</span>
+                    <span>o</span>
+                    <span>m</span>
+                    <span>e</span>
+                </div>
+                <div class="chen">
+                    <span>T</span>
+                    <span>o</span>
+                </div>
+                <div>
+                    <span>S</span>
+                    <span>k</span>
+                    <span>y</span>
+                    <span>c</span>
+                    <span>h</span>
+                    <span>e</span>
+                    <span>n</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+    var nian = document.querySelector(".nian");
+    var yue = document.querySelector(".yue");
+    var r = document.querySelector(".r");
+    var shi1 = document.querySelector(".shi1");
+    var shi2 = document.querySelector(".shi2");
+    var fen1 = document.querySelector(".fen1");
+    var fen2 = document.querySelector(".fen2");
+    var miao1 = document.querySelector(".miao1");
+    var miao2 = document.querySelector(".miao2");
+
+    //    function time(){
+    //        nian.innerText=myDate.getFullYear();
+    //        yue.innerText=myDate.getMonth();
+    //        r.innerText=myDate.getDate();
+    //        shi1.innerText=Math.floor(myDate.getHours()/10);
+    //        shi2.innerText=Math.floor(myDate.getHours()%10);
+    //        fen1.innerText=Math.floor(myDate.getMinutes()/10);
+    //        fen2.innerText=Math.floor(myDate.getMinutes()%10);
+    //        miao1.innerText=Math.floor(myDate.getSeconds()/10);
+    //        miao2.innerText=Math.floor(myDate.getSeconds()%10);
+    //    }
+    var myDate = new Date();
+    nian.innerText = myDate.getFullYear();
+    yue.innerText = myDate.getMonth();
+    r.innerText = myDate.getDate();
+    setInterval(function () {
+        var myDate1 = new Date();
+        shi1.innerText = Math.floor(myDate1.getHours() / 10);
+        shi2.innerText = Math.floor(myDate1.getHours() % 10);
+        fen1.innerText = Math.floor(myDate1.getMinutes() / 10);
+        fen2.innerText = Math.floor(myDate1.getMinutes() % 10);
+        miao1.innerText = Math.floor(myDate1.getSeconds() / 10);
+        miao2.innerText = Math.floor(myDate1.getSeconds() % 10);
+
+    }, 1000);
+</script>
+</html>
